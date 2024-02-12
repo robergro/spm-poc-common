@@ -8,6 +8,6 @@ import SwiftUI
 import XCTest
 
 import Combine
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 
 

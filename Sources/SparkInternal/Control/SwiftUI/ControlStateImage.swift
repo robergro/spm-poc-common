@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@_spi(SPI) public final class ControlStateImage: ObservableObject {
+@_spi(SI_SPI) public final class ControlStateImage: ObservableObject {
 
     // MARK: - Public Published Properties
 

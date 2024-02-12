@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension NSLayoutConstraint {
+@_spi(SI_SPI) public extension NSLayoutConstraint {
     
     /// There is no native possibility to update the multiplier
     /// So we need to recreate the constraint with the new multiplier

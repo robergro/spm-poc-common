@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension UIEdgeInsets {
+@_spi(SI_SPI) public extension UIEdgeInsets {
 
     // MARK: - Init
 

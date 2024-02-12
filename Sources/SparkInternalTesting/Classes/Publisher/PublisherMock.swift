@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 
-@_spi(SPI) public final class PublisherMock<T: Publisher> {
+@_spi(SI_SPI) public final class PublisherMock<T: Publisher> {
 
     // MARK: - Properties
 

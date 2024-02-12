@@ -7,7 +7,7 @@
 //
 
 import Combine
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 import SwiftUI
 import XCTest
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension UIView {
+@_spi(SI_SPI) public extension UIView {
 
     /// Adds a subview with the same size as the view.
     /// - Parameter subview: subview to be added

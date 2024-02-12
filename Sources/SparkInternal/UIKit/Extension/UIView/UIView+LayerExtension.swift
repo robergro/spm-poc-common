@@ -9,7 +9,7 @@
 import UIKit
 import SparkTheming
 
-@_spi(SPI) public extension UIView {
+@_spi(SI_SPI) public extension UIView {
 
     /// CGColors need to be refreshed on trait changes
     func setBorderColor(from colorToken: any ColorToken) {

@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// Wraps the content in a horizontal scroll view, if the content is too wide to display on screen.
-@_spi(SPI) public struct HorizontalOverflowContentViewModifier<Value>: ViewModifier where Value: Equatable {
+@_spi(SI_SPI) public struct HorizontalOverflowContentViewModifier<Value>: ViewModifier where Value: Equatable {
     // MARK: - Properties
     @State private var contentOverflow: Bool = false
     @State private var height: CGFloat = 0
@@ -38,7 +38,7 @@ import SwiftUI
     }
 }
 
-@_spi(SPI) public extension View {
+@_spi(SI_SPI) public extension View {
     @ViewBuilder
     func wrappedInScrollView(when condition: Bool) -> some View {
         if condition {

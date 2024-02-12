@@ -8,8 +8,10 @@
 
 import SwiftUI
 import XCTest
-
+@_spi(SI_SPI) @testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternalSnapshotTesting
 @testable import SparkTheme
+@testable import SparkTheming
 
 final class ColorSnapshotTests: SnapshotTestCase {
     let colors = SparkTheme.shared.colors

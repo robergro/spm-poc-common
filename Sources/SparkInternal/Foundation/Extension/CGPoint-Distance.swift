@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension CGPoint {
+@_spi(SI_SPI) public extension CGPoint {
 
     /// Returns the distance between two points
     func distance(to other: CGPoint) -> CGFloat {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension Optional where Wrapped: Collection {
+@_spi(SI_SPI) public extension Optional where Wrapped: Collection {
 
     var isEmptyOrNil: Bool {
         return self?.isEmpty ?? true

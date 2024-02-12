@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension CGRect {
+@_spi(SI_SPI) public extension CGRect {
     func pointIndex(of point: CGPoint, horizontalSlices items: Int) -> Int? {
         guard items > 0, self.contains(point) else {
             return nil

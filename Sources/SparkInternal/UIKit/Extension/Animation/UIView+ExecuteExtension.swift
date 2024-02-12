@@ -8,12 +8,12 @@
 
 import UIKit
 
-@_spi(SPI) public enum UIExecuteAnimationType {
+@_spi(SI_SPI) public enum UIExecuteAnimationType {
     case unanimated
     case animated(duration: TimeInterval)
 }
 
-@_spi(SPI) public extension UIView {
+@_spi(SI_SPI) public extension UIView {
 
     /// Execute a code with or without animation.
     static func execute(

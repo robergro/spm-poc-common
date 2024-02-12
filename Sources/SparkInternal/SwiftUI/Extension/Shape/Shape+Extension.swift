@@ -9,7 +9,7 @@
 import SwiftUI
 import SparkTheming
 
-@_spi(SPI) public extension Shape {
+@_spi(SI_SPI) public extension Shape {
 
     /// Add fill color from an color token.
     /// - Parameters:

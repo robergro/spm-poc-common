@@ -11,7 +11,7 @@ import SwiftUI
 import UIKit
 import SparkTheme
 
-@_spi(SPI) open class SnapshotTestCase: XCTestCase {
+@_spi(SI_SPI) open class SnapshotTestCase: XCTestCase {
 
     // MARK: - Set up
 

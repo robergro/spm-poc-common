@@ -10,12 +10,7 @@ import SwiftUI
 import UIKit
 import SnapshotTesting
 
-@_spi(SPI) open class UIKitComponentSnapshotTestCase: SnapshotTestCase {
-
-    // MARK: - Type Alias
-
-    private typealias Constants = ComponentSnapshotTestConstants
-    private typealias Helpers = ComponentSnapshotTestHelpers
+@_spi(SI_SPI) open class UIKitComponentSnapshotTestCase: SnapshotTestCase {
 
     // MARK: - Snapshot Testing
 
@@ -24,9 +19,9 @@ import SnapshotTesting
         named name: String? = nil,
         modes: [ComponentSnapshotTestMode],
         sizes: [UIContentSizeCategory],
-        record recording: Bool = Constants.record,
+        record recording: Bool = ComponentSnapshotTestConstants.record,
         delay: TimeInterval = 0,
-        timeout: TimeInterval = Constants.timeout,
+        timeout: TimeInterval = ComponentSnapshotTestConstants.timeout,
         file: StaticString = #file,
         testName: String = #function,
         line: UInt = #line
@@ -38,9 +33,9 @@ import SnapshotTesting
                     as: .wait(
                         for: delay,
                         on: .image(
-                            precision: Constants.imagePrecision,
-                            perceptualPrecision: Constants.imagePerceptualPrecision,
-                            traits: Helpers.traitCollection(
+                            precision: ComponentSnapshotTestConstants.imagePrecision,
+                            perceptualPrecision: ComponentSnapshotTestConstants.imagePerceptualPrecision,
+                            traits: ComponentSnapshotTestHelpers.traitCollection(
                                 mode: mode,
                                 size: size
                             )
@@ -50,7 +45,7 @@ import SnapshotTesting
                     record: recording,
                     timeout: timeout,
                     file: file,
-                    testName: Helpers.testName(
+                    testName: ComponentSnapshotTestHelpers.testName(
                         testName,
                         mode: mode,
                         size: size

@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension CGRect {
+@_spi(SI_SPI) public extension CGRect {
     /// Returns the center of the x-coordinate of the rect
     var centerX: CGFloat {
         return (self.minX + self.maxX)/2

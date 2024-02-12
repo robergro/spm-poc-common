@@ -9,7 +9,7 @@
 import SwiftUI
 import XCTest
 
-@_spi(SPI) public struct IconographyTests {
+@_spi(SI_SPI) public struct IconographyTests {
 
     // MARK: - Shared
 

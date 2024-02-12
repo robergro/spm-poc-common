@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public enum ComponentSnapshotTestConstants {
+@_spi(SI_SPI) public enum ComponentSnapshotTestConstants {
     public static let record = false
     public static let timeout: TimeInterval = 5
 

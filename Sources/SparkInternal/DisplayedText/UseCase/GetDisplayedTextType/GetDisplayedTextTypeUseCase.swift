@@ -7,7 +7,7 @@
 //
 
 // sourcery: AutoMockable
-@_spi(SPI) public protocol GetDisplayedTextTypeUseCaseable {
+@_spi(SI_SPI) public protocol GetDisplayedTextTypeUseCaseable {
     func execute(text: String?,
                  attributedText: AttributedStringEither?) -> DisplayedTextType
 
@@ -15,7 +15,7 @@
     func execute(attributedText: AttributedStringEither?) -> DisplayedTextType
 }
 
-@_spi(SPI) public struct GetDisplayedTextTypeUseCase: GetDisplayedTextTypeUseCaseable {
+@_spi(SI_SPI) public struct GetDisplayedTextTypeUseCase: GetDisplayedTextTypeUseCaseable {
 
     // MARK: - Initialization
 

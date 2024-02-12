@@ -6,11 +6,11 @@
 //  Copyright © 2023 Adevinta. All rights reserved.
 //
 
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 import SwiftUI
 import UIKit
 
-@_spi(SPI) public extension ImageEither {
+@_spi(SI_SPI) public extension ImageEither {
 
     static func mock(isSwiftUIComponent: Bool) -> Self {
         return isSwiftUIComponent ? .right(.mock) : .left(.mock)

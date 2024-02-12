@@ -12,9 +12,9 @@ import UIKit
 
 // MARK: - Constants
 
-fileprivate enum Constants {
-    static let record = false
-    static let timeout: TimeInterval = 5
+@_spi(SI_SPI) public enum Constants {
+    public static let record = false
+    public static let timeout: TimeInterval = 5
 
     static let namedSuffixForLight = "light"
     static let namedSuffixForDark = "dark"
@@ -22,14 +22,14 @@ fileprivate enum Constants {
     static let imagePrecision: Float = 0.98
     static let imagePerceptualPrecision: Float = 0.98
 
-    static let sizes: [UIContentSizeCategory] = [.extraSmall, .medium, .accessibilityExtraExtraExtraLarge]
+    public static let sizes: [UIContentSizeCategory] = [.extraSmall, .medium, .accessibilityExtraExtraExtraLarge]
 
     static let separator = "-"
 }
 
 // MARK: - SwiftUI
 
-@_spi(SPI) public extension SwiftUIComponentSnapshotTestCase {
+@_spi(SI_SPI) public extension SwiftUIComponentSnapshotTestCase {
 
     // MARK: - Snapshot Testing
 
@@ -84,7 +84,7 @@ fileprivate enum Constants {
 
 // MARK: - UIKit
 
-@_spi(SPI) public extension UIKitComponentSnapshotTestCase {
+@_spi(SI_SPI) public extension UIKitComponentSnapshotTestCase {
 
     // MARK: - Snapshot Testing
 

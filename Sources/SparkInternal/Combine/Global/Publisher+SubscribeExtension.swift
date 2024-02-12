@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 
-@_spi(SPI) public extension Publisher where Failure == Never {
+@_spi(SI_SPI) public extension Publisher where Failure == Never {
     func subscribe<S>(
         in subscriptions: inout Set<AnyCancellable>,
         on scheduler: S = UIScheduler.shared,

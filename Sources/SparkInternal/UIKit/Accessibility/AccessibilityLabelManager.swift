@@ -16,7 +16,7 @@ import Foundation
 /// In this case, the accessibilityLabel can change if the subview accessibilityLabel changes.
 /// Or,
 /// The consumer set a value. In this case, In this case, the accessibilityLabel will always be the one set by the consumer
-@_spi(SPI) public struct AccessibilityLabelManager {
+@_spi(SI_SPI) public struct AccessibilityLabelManager {
 
     // MARK: - Private Properties
 

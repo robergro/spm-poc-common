@@ -7,7 +7,8 @@
 //
 
 import XCTest
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternalTesting
 
 final class DisplayedTextViewModelTests: XCTestCase {
     

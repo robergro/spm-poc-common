@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension CGFloat {
+@_spi(SI_SPI) public extension CGFloat {
 
     /// Because the @ScaledMetric cannot be updated,
     /// we add this the scaled metric multiplier value.
@@ -46,7 +46,7 @@ import Foundation
     }
 }
 
-@_spi(SPI) public extension Optional where Wrapped == CGFloat {
+@_spi(SI_SPI) public extension Optional where Wrapped == CGFloat {
 
     /// Same as **scaledMetric(with:)** func with optional value
     /// If the CGFloat is nil, the default value is 0

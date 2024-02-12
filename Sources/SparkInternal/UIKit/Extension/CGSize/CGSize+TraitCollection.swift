@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension CGSize {
+@_spi(SI_SPI) public extension CGSize {
     func scaled(for traitCollection: UITraitCollection) -> CGSize {
         let bodyFontMetrics = UIFontMetrics(forTextStyle: .body)
 

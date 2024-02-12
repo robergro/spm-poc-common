@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@_spi(SPI) public extension Array where Element: UIView {
+@_spi(SI_SPI) public extension Array where Element: UIView {
 
     /// Returns the index of the array of views which is closest to the point.
     func index(closestTo location: CGPoint) -> Int? {
@@ -17,7 +17,7 @@ import UIKit
     }
 }
 
-@_spi(SPI) public extension Array where Element == CGRect {
+@_spi(SI_SPI) public extension Array where Element == CGRect {
     /// Returns the index of the array of rects which is closest to the point.
     func index(closestTo location: CGPoint) -> Int? {
         let distances = self.map{ rect in

@@ -8,7 +8,7 @@
 
 import XCTest
 import SwiftUI
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 
 final class EdgeInsetsExtensionsTests: XCTestCase {
 

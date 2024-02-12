@@ -8,11 +8,11 @@
 
 import Foundation
 
-@_spi(SPI) public protocol Updateable {
+@_spi(SI_SPI) public protocol Updateable {
     func update<Value>(_ keyPath: WritableKeyPath<Self, Value>, value: Value) -> Self
 }
 
-@_spi(SPI) public extension Updateable {
+@_spi(SI_SPI) public extension Updateable {
     func update<Value>(_ keyPath: WritableKeyPath<Self, Value>, value: Value) -> Self {
 
         var copy = self

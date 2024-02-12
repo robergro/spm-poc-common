@@ -9,7 +9,7 @@
 import Foundation
 
 /// Manage all the states for a dynamic property.
-@_spi(SPI) public final class ControlPropertyStates<PropertyType: Equatable> {
+@_spi(SI_SPI) public final class ControlPropertyStates<PropertyType: Equatable> {
 
     // MARK: - Type Alias
 

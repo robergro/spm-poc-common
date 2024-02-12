@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@_spi(SPI) public extension UIStackView {
+@_spi(SI_SPI) public extension UIStackView {
     @discardableResult
     func removeArrangedSubviews() -> [UIView] {
         return self.arrangedSubviews.reduce([UIView]()) { $0 + [self.detachArrangedSubview($1)] }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension Array {
+@_spi(SI_SPI) public extension Array {
     subscript(safe index: Int) -> Element? {
         guard index >= 0, index < self.endIndex else {
             return nil

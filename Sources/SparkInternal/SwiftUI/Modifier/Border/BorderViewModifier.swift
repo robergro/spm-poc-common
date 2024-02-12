@@ -9,7 +9,7 @@
 import SwiftUI
 import SparkTheming
 
-@_spi(SPI) public struct BorderViewModifier: ViewModifier {
+@_spi(SI_SPI) public struct BorderViewModifier: ViewModifier {
 
     // MARK: - Properties
 

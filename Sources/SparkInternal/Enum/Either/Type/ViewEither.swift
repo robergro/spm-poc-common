@@ -9,4 +9,4 @@
 import UIKit
 import SwiftUI
 
-@_spi(SPI) public typealias ViewEither = Either<UIView, AnyView>
+@_spi(SI_SPI) public typealias ViewEither = Either<UIView, AnyView>

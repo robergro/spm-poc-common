@@ -9,14 +9,14 @@ import XCTest
 import {{ import }}
 {% endfor %}
 {% for import in argument.autoMockableTestableImports %}
-@testable import {{ import }}
+@_spi(SI_SPI) @testable import {{ import }}
 {% endfor %}
 
 {% macro expectedSinkCount variable %}expected{{ variable.name | upperFirstLetter }}SinkCount{% endmacro %}
 {% macro existentialVariableTypeName typeName %}{% if typeName|contains:"any" and typeName|contains:"!" %}{{ typeName | replace:"any","(any" | replace:"!",")!" }}{% elif typeName|contains:"any" and typeName.isOptional %}{{ typeName | replace:"any","(any" | replace:"?",")?" }}{% elif typeName|contains:"any" and typeName.isClosure %}({{ typeName | replace:"any","(any" | replace:"?",")?" }}){%else%}{{ typeName }}{%endif%}{% endmacro %}
 
 {% for class in types.classes where class|annotated:"AutoPublisherTest" %}{% if class.name != "AutoPublisherTest" %}
-public final class {{ class.name }}PublisherTest {
+@_spi(SI_SPI) public final class {{ class.name }}PublisherTest {
 
     {% for key, value in class.annotations where key|contains: "<" and key|contains: ">" %}{% if forloop.first %}// MARK: - Type Alias
 

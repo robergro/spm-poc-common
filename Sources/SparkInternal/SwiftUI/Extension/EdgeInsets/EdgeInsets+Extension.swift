@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@_spi(SPI) public extension EdgeInsets {
+@_spi(SI_SPI) public extension EdgeInsets {
 
     // MARK: - Init
 

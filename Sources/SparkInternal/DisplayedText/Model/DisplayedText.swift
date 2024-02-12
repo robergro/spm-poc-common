@@ -6,7 +6,7 @@
 //  Copyright © 2023 Adevinta. All rights reserved.
 //
 
-@_spi(SPI) public struct DisplayedText: Equatable {
+@_spi(SI_SPI) public struct DisplayedText: Equatable {
 
     // MARK: - Properties
 

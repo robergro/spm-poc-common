@@ -10,7 +10,7 @@ import SwiftUI
 
 /// A Button style which updates the passed binding when the button is pressed.
 /// The change to the button will be animated by default. To deactivate the animation, set the animationDuration to 0.0
-@_spi(SPI) public struct PressedButtonStyle: ButtonStyle {
+@_spi(SI_SPI) public struct PressedButtonStyle: ButtonStyle {
     @Binding public var isPressed: Bool
     public let duration: CGFloat
 

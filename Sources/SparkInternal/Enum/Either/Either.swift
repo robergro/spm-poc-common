@@ -8,19 +8,19 @@
 
 import Foundation
 
-@_spi(SPI) public enum Either<Left, Right> {
+@_spi(SI_SPI) public enum Either<Left, Right> {
     case left(Left)
     case right(Right)
 }
 
 // MARK: - Equatable
 
-@_spi(SPI) public extension Either: Equatable where Left: Equatable, Right: Equatable {
+@_spi(SI_SPI) extension Either: Equatable where Left: Equatable, Right: Equatable {
 }
 
 // MARK: - Properties
 
-@_spi(SPI) public extension Either {
+@_spi(SI_SPI) public extension Either {
     var rightValue: Right {
         switch self {
         case let .right(value): return value
@@ -36,7 +36,7 @@ import Foundation
     }
 }
 
-@_spi(SPI) public extension Either {
+@_spi(SI_SPI) public extension Either {
     static func of(_ left: Left?, or right: Right) -> Either {
         if let left = left {
             return .left(left)

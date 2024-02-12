@@ -9,7 +9,7 @@
 import XCTest
 import Combine
 
-@_spi(SPI) public func XCTAssertPublisherSinkCountEqual<T: Publisher>(
+@_spi(SI_SPI) public func XCTAssertPublisherSinkCountEqual<T: Publisher>(
     on mock: PublisherMock<T>,
     _ expression: Int,
     function: String = #function,
@@ -29,7 +29,7 @@ import Combine
     )
 }
 
-@_spi(SPI) public func XCTAssertPublisherSinkIsCalled<T: Publisher>(
+@_spi(SI_SPI) public func XCTAssertPublisherSinkIsCalled<T: Publisher>(
     on mock: PublisherMock<T>,
     _ expression: Bool,
     function: String = #function,
@@ -49,7 +49,7 @@ import Combine
     )
 }
 
-@_spi(SPI) public func XCTAssertPublisherSinkValueEqual<T: Publisher>(
+@_spi(SI_SPI) public func XCTAssertPublisherSinkValueEqual<T: Publisher>(
     on mock: PublisherMock<T>,
     _ expression: T.Output,
     function: String = #function,
@@ -69,7 +69,7 @@ import Combine
     )
 }
 
-@_spi(SPI) public func XCTAssertPublisherSinkValueIdentical<T: Publisher, Z: AnyObject>(
+@_spi(SI_SPI) public func XCTAssertPublisherSinkValueIdentical<T: Publisher, Z: AnyObject>(
     on mock: PublisherMock<T>,
     _ expression: Z?,
     expressionShouldBeSet: Bool = true,
@@ -95,7 +95,7 @@ import Combine
     )
 }
 
-@_spi(SPI) public func XCTAssertPublisherSinkValueNil<T: Publisher>(
+@_spi(SI_SPI) public func XCTAssertPublisherSinkValueNil<T: Publisher>(
     on mock: PublisherMock<T>,
     function: String = #function,
     file: StaticString = #filePath,
@@ -113,7 +113,7 @@ import Combine
     )
 }
 
-@_spi(SPI) public func XCTAssertPublisherSinkValuesEqual<T: Publisher>(
+@_spi(SI_SPI) public func XCTAssertPublisherSinkValuesEqual<T: Publisher>(
     on mock: PublisherMock<T>,
     _ expression: [T.Output],
     function: String = #function,

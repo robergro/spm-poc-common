@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension NSLayoutConstraint {
+@_spi(SI_SPI) public extension NSLayoutConstraint {
     /// Make the view stick to the edges of an other view
     ///
     /// - Parameters:

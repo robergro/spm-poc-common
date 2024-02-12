@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension UIView {
+@_spi(SI_SPI) public extension UIView {
     var isNotHidden: Bool {
         return !self.isHidden
     }

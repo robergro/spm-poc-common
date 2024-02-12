@@ -9,7 +9,7 @@
 import XCTest
 import SnapshotTesting
 
-public func sparkAssertSnapshot<Value, Format>(
+@_spi(SI_SPI) public func sparkAssertSnapshot<Value, Format>(
     matching value: @autoclosure () throws -> Value,
     as snapshotting: Snapshotting<Value, Format>,
     named name: String? = nil,

@@ -10,18 +10,18 @@ import Combine
 import UIKit
 
 // MARK: - Methods
-@_spi(SPI) public extension UIControl {
+@_spi(SI_SPI) public extension UIControl {
     func publisher(for event: Event) -> EventPublisher {
         EventPublisher(control: self, event: event)
     }
 }
 
 // MARK: - Publisher
-@_spi(SPI) public extension UIControl {
+@_spi(SI_SPI) public extension UIControl {
     struct EventPublisher: Publisher {
         // MARK: - Result
-        @_spi(SPI) public typealias Output = UIControl
-        @_spi(SPI) public typealias Failure = Never
+        @_spi(SI_SPI) public typealias Output = UIControl
+        @_spi(SI_SPI) public typealias Failure = Never
 
         // MARK: - Properties
         var control: UIControl

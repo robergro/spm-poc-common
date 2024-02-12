@@ -9,7 +9,7 @@
 import XCTest
 
 /// `TestCaseTracker` is used to keep the track of the current test suite. It creates a sub-directory for the current test case classname for snapshot-images.
-@_spi(SPI) public final class SnapshotTestCaseTracker: NSObject, XCTestObservation {
+@_spi(SI_SPI) public final class SnapshotTestCaseTracker: NSObject, XCTestObservation {
     // MARK: - Shared instance
 
     public static let shared = SnapshotTestCaseTracker()

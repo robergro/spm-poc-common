@@ -7,7 +7,7 @@
 //
 
 /// Contains the dynamic property for a ControlState.
-@_spi(SPI) public final class ControlPropertyState<T: Equatable> {
+@_spi(SI_SPI) public final class ControlPropertyState<T: Equatable> {
 
     // MARK: - Properties
 

@@ -10,12 +10,12 @@ import Combine
 import Foundation
 
 /// Combine custom scheduler which schedule action in DispatchQueue.main
-@_spi(SPI) public struct UIScheduler: Scheduler {
+@_spi(SI_SPI) public struct UIScheduler: Scheduler {
 
     // MARK: - Type Alias
 
-    @_spi(SPI) public typealias SchedulerOptions = Never
-    @_spi(SPI) public typealias SchedulerTimeType = DispatchQueue.SchedulerTimeType
+    @_spi(SI_SPI) public typealias SchedulerOptions = Never
+    @_spi(SI_SPI) public typealias SchedulerTimeType = DispatchQueue.SchedulerTimeType
 
     // MARK: - Static Properties
 

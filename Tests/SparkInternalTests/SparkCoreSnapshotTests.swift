@@ -8,7 +8,7 @@
 
 import XCTest
 import SnapshotTesting
-import SparkInternalSnapshotTesting
+@_spi(SI_SPI) import SparkInternalSnapshotTesting
 import SwiftUI
 
 // MARK: - UIKit snapshot example

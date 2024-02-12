@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public enum ComponentSnapshotTestHelpers {
+@_spi(SI_SPI) public enum ComponentSnapshotTestHelpers {
 
     // MARK: - Helpers
 

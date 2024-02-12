@@ -9,7 +9,7 @@
 import XCTest
 import SparkTheme
 
-@_spi(SPI) open class TestCase: XCTestCase {
+@_spi(SI_SPI) open class TestCase: XCTestCase {
 
     // MARK: - Set up
 

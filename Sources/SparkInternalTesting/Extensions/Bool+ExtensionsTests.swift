@@ -6,7 +6,7 @@
 //  Copyright © 2023 Adevinta. All rights reserved.
 //
 
-@_spi(SPI) public extension Bool {
+@_spi(SI_SPI) public extension Bool {
 
     // MARK: - Properties
 

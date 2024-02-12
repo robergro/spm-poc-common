@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@_spi(SPI) public struct NoButtonStyle: ButtonStyle {
+@_spi(SI_SPI) public struct NoButtonStyle: ButtonStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         return configuration.label

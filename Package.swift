@@ -43,8 +43,6 @@ let package = Package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing",
             from: "1.11.0"
         )
-
-        //
     ],
     targets: [
         .target(
@@ -92,6 +90,7 @@ let package = Package(
             name: "SparkInternalTests",
             dependencies: [
                 "SparkInternal",
+                "SparkInternalSnapshotTesting",
                 "SparkInternalTesting"
             ]
         ),

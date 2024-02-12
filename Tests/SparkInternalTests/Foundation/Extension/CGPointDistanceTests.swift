@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 
 final class CGPointDistanceTests: XCTestCase {
 

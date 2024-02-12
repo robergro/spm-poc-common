@@ -9,7 +9,7 @@
 import SwiftUI
 import SparkTheming
 
-@_spi(SPI) public extension View {
+@_spi(SI_SPI) public extension View {
 
     /// Add a border to the current view.
     /// - Parameters:

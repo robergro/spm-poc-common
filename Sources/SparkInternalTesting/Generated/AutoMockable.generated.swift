@@ -8,13 +8,13 @@ import UIKit
 import SwiftUI
 
 import Combine
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 
 
 
 
 
-@_spi(SPI) public final class DisplayedTextViewModelGeneratedMock: SparkInternal.DisplayedTextViewModel, ResetGeneratedMock {
+@_spi(SI_SPI) public final class DisplayedTextViewModelGeneratedMock: SparkInternal.DisplayedTextViewModel, ResetGeneratedMock {
 
     public var underlyingDisplayedTextType: DisplayedTextType!
     public var displayedTextType: DisplayedTextType {
@@ -78,7 +78,7 @@ import Combine
     }
 }
 
-@_spi(SPI) public final class GetDidDisplayedTextChangeUseCaseableGeneratedMock: SparkInternal.GetDidDisplayedTextChangeUseCaseable, ResetGeneratedMock {
+@_spi(SI_SPI) public final class GetDidDisplayedTextChangeUseCaseableGeneratedMock: SparkInternal.GetDidDisplayedTextChangeUseCaseable, ResetGeneratedMock {
 
 
     // MARK: - Initialization
@@ -131,7 +131,7 @@ import Combine
     }
 }
 
-@_spi(SPI) public final class GetDisplayedTextTypeUseCaseableGeneratedMock: SparkInternal.GetDisplayedTextTypeUseCaseable, ResetGeneratedMock {
+@_spi(SI_SPI) public final class GetDisplayedTextTypeUseCaseableGeneratedMock: SparkInternal.GetDisplayedTextTypeUseCaseable, ResetGeneratedMock {
 
 
     // MARK: - Initialization
@@ -206,6 +206,6 @@ import Combine
 
 // MARK: - Reset
 
-@_spi(SPI) public protocol ResetGeneratedMock {
+public protocol ResetGeneratedMock {
     func reset()
 }

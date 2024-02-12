@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 import XCTest
 
 final class EitherTests: XCTestCase {

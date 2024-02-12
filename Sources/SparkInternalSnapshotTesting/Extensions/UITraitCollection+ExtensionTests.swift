@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension UITraitCollection {
+@_spi(SI_SPI) public extension UITraitCollection {
 
     // MARK: - Properties
 

@@ -9,7 +9,7 @@ import XCTest
 import {{ import }}
 {% endfor %}
 {% for import in argument.autoMockableTestableImports %}
-@testable import {{ import }}
+@_spi(SI_SPI) @testable import {{ import }}
 {% endfor %}
 
 {% macro publisherName variable %}{{ variable.name }}PublisherMock{% endmacro %}
@@ -21,7 +21,7 @@ import {{ import }}
 {% macro existentialVariableTypeName typeName %}{% if typeName|contains:"any" and typeName|contains:"!" %}{{ typeName | replace:"any","(any" | replace:"!",")!" }}{% elif typeName|contains:"any" and typeName.isOptional %}{{ typeName | replace:"any","(any" | replace:"?",")?" }}{% elif typeName|contains:"any" and typeName.isClosure %}({{ typeName | replace:"any","(any" | replace:"?",")?" }}){%else%}{{ typeName }}{%endif%}{% endmacro %}
 
 {% for class in types.classes where class|annotated:"AutoViewModelStub" %}{% if class.name != "AutoViewModelStub" %}
-public class {{ class.name }}Stub {
+@_spi(SI_SPI) public class {{ class.name }}Stub {
 
     {% for key, value in class.annotations where key|contains: "<" and key|contains: ">" %}{% if forloop.first %}// MARK: - Type Alias
 

@@ -9,4 +9,4 @@
 import UIKit
 import SwiftUI
 
-@_spi(SPI) public typealias ImageEither = Either<UIImage, Image>
+@_spi(SI_SPI) public typealias ImageEither = Either<UIImage, Image>

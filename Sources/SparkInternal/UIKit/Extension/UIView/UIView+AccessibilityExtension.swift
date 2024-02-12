@@ -8,7 +8,7 @@
 
 import UIKit
 
-@_spi(SPI) public extension UIView {
+@_spi(SI_SPI) public extension UIView {
     
     /// Insert or remove the trait on the current accessibilityTraits
     func accessibilityTraits(manage trait: UIAccessibilityTraits, insert: Bool) {

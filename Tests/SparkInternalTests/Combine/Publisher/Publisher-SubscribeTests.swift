@@ -7,7 +7,7 @@
 //
 
 import Combine
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 import XCTest
 
 final class Publisher_SubscribeTests: XCTestCase {

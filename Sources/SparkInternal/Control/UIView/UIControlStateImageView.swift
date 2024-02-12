@@ -10,7 +10,7 @@ import UIKit
 
 /// The custom UIImageView which set the correct image from the state of the UIControl.
 /// Must be used only on UIControl.
-@_spi(SPI) public final class UIControlStateImageView: UIImageView {
+@_spi(SI_SPI) public final class UIControlStateImageView: UIImageView {
 
     // MARK: - Properties
 

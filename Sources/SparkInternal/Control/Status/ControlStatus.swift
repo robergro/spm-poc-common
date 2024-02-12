@@ -7,7 +7,7 @@
 //
 
 /// The current status of the control: highlighted or not, disabled or not and selected or not.
-@_spi(SPI) public final class ControlStatus: Equatable {
+@_spi(SI_SPI) public final class ControlStatus: Equatable {
 
     // MARK: - Properties
 

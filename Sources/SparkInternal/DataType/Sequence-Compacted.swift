@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_spi(SPI) public extension Sequence {
+@_spi(SI_SPI) public extension Sequence {
     func compacted<ElementOfResult>() -> [ElementOfResult] where Element == ElementOfResult?  {
         return self.compactMap { $0 }
     }

@@ -9,7 +9,7 @@
 import Combine
 import SwiftUI
 
-@_spi(SPI) public final class ValueBinding<ID: Equatable & CustomStringConvertible> {
+@_spi(SI_SPI) public final class ValueBinding<ID: Equatable & CustomStringConvertible> {
     private var selectedID: ID?
 
     public lazy var binding = Binding<ID?>(

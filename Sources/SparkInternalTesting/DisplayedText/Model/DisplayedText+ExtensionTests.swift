@@ -6,9 +6,9 @@
 //  Copyright © 2023 Adevinta. All rights reserved.
 //
 
-@testable import SparkInternal
+@_spi(SI_SPI) @testable import SparkInternal
 
-@_spi(SPI) public extension DisplayedText {
+@_spi(SI_SPI) public extension DisplayedText {
 
     // MARK: - Properties
 

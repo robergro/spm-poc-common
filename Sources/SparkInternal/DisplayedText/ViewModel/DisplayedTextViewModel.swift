@@ -7,7 +7,7 @@
 //
 
 // sourcery: AutoMockable
-@_spi(SPI) public protocol DisplayedTextViewModel {
+@_spi(SI_SPI) public protocol DisplayedTextViewModel {
     var displayedTextType: DisplayedTextType { get }
     var displayedText: DisplayedText? { get }
 
@@ -24,7 +24,7 @@
 }
 
 // View model used by a component view model that contains a text/attributed management.
-@_spi(SPI) public final class DisplayedTextViewModelDefault: DisplayedTextViewModel {
+@_spi(SI_SPI) public final class DisplayedTextViewModelDefault: DisplayedTextViewModel {
 
     // MARK: - Internal Properties
 

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@_spi(SPI) public extension View {
+@_spi(SI_SPI) public extension View {
 
     /// Set a proportional width from the parent width
     /// - Parameters:

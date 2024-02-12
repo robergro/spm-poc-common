@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@_spi(SPI) public struct AccessibilityViewModifier: ViewModifier {
+@_spi(SI_SPI) public struct AccessibilityViewModifier: ViewModifier {
 
     // MARK: - Properties
 
