@@ -87,7 +87,14 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "SparkInternalTests",
+            name: "SparkInternalUnitTests",
+            dependencies: [
+                "SparkInternal",
+                "SparkInternalTesting"
+            ]
+        ),
+        .testTarget(
+            name: "SparkInternalSnapshotTests",
             dependencies: [
                 "SparkInternal",
                 "SparkInternalSnapshotTesting",

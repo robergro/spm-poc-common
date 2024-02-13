@@ -10,6 +10,14 @@ import XCTest
 
 /// `TestCaseTracker` is used to keep the track of the current test suite. It creates a sub-directory for the current test case classname for snapshot-images.
 @_spi(SI_SPI) public final class SnapshotTestCaseTracker: NSObject, XCTestObservation {
+
+    // MARK: - Constants
+
+    private enum Constants {
+        static let snapshotFolder = ".__snapshots__"
+        static let separator = "/"
+    }
+
     // MARK: - Shared instance
 
     public static let shared = SnapshotTestCaseTracker()
@@ -21,11 +29,27 @@ import XCTest
 
     // MARK: - Methods
 
+    /// Create the snapshot directory for a file
+    /// The final link should be like: *"XYZ/ModuleName/Tests/ModuleNameSnapshotTests/.__snapshots__/"*
     public func snapshotDirectory(for file: StaticString) -> String {
-        let snapshotDirectory = ProcessInfo.processInfo.environment["SNAPSHOT_REFERENCE_DIR"]! + "/"
-        guard let url = URL(string: snapshotDirectory) else { return "" }
+        guard let identifier = Bundle(for: type(of: self)).bundleIdentifier else {
+            fatalError("No identifier found on the SPM")
+        }
 
-        return url.appendingPathComponent(self.currentTestCase.testClassName).path
+        var filePaths = "\(file)".components(separatedBy: Constants.separator)
+
+        guard let bundlePathIndex = filePaths.firstIndex(of: identifier) else {
+            fatalError("No bundle identifier found on the file path")
+        }
+
+        // Remove all folder under the ModuleNameSnapshotTests folder.
+        filePaths.removeLast(filePaths.count - bundlePathIndex - 1)
+        // Add the snapshot folder
+        filePaths.append(Constants.snapshotFolder)
+        // Add the test class name
+        filePaths.append(self.currentTestCase.testClassName)
+
+        return filePaths.joined(separator: Constants.separator)
     }
 
     public func testName(_ identifier: String? = nil) -> String {
