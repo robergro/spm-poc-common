@@ -130,7 +130,7 @@ import UIKit
             let traits = UITraitCollection(preferredContentSizeCategory: size)
             let filename = [testName, Constants.namedSuffixForLight, size.identifier]
                 .joined(separator: Constants.separator)
-            
+
             sparkAssertSnapshot(
                 matching: view(),
                 as: .wait(

@@ -55,6 +55,7 @@ public extension PublisherMock where T.Failure == Never {
                 self.sinkValue = value
                 self.sinkValues.append(value)
             }
-        }.store(in: &subscriptions)
+        }
+        .store(in: &subscriptions)
     }
 }

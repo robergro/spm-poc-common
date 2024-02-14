@@ -8,12 +8,12 @@
 
 import SwiftUI
 import UIKit
-import SnapshotTesting
+@_implementationOnly import SnapshotTesting
 
 @_spi(SI_SPI) open class SwiftUIComponentSnapshotTestCase: SnapshotTestCase {
 
     // MARK: - Snapshot Testing
-    
+
     public func assertSnapshot(
         matching view: @autoclosure () -> some View,
         named name: String? = nil,
@@ -30,8 +30,9 @@ import SnapshotTesting
                 sparkAssertSnapshot(
                     matching: view().environment(
                         \.sizeCategory,
-                         ContentSizeCategory(size) ?? .extraSmall
-                    ).background(Color.gray),
+                        ContentSizeCategory(size) ?? .extraSmall
+                    )
+                    .background(Color.gray),
                     as: .image(
                         precision: ComponentSnapshotTestConstants.imagePrecision,
                         perceptualPrecision: ComponentSnapshotTestConstants.imagePerceptualPrecision,

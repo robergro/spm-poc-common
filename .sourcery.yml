@@ -6,7 +6,7 @@ configurations:
         - Sources/SparkInternalTesting/
         - Sources/SparkInternalSnapshotTesting/
     templates:
-      - sourcery/template/SparkAutoMockable.stencil
+      - .sourcery/template/SparkAutoMockable.stencil
     output: Sources/SparkInternalTesting/Generated/AutoMockable.generated.swift
     args:
       autoMockableImports: [Combine]
@@ -18,7 +18,7 @@ configurations:
         - Sources/SparkInternalTesting/
         - Sources/SparkInternalSnapshotTesting/
     templates:
-      - sourcery/template/SparkAutoMockTest.stencil
+      - .sourcery/template/SparkAutoMockTest.stencil
     output: Sources/SparkInternalTesting/Generated/AutoMockTest.generated.swift
     args:
       autoMockableImports: [Combine]
@@ -30,7 +30,7 @@ configurations:
         - Sources/SparkInternalTesting/
         - Sources/SparkInternalSnapshotTesting/
     templates:
-      - sourcery/template/SparkAutoPublisherTest.stencil
+      - .sourcery/template/SparkAutoPublisherTest.stencil
     output: Sources/SparkInternalTesting/Generated/AutoPublisherTest.generated.swift
     args:
       autoMockableImports: [Combine]
@@ -42,7 +42,7 @@ configurations:
         - Sources/SparkInternalTesting/
         - Sources/SparkInternalSnapshotTesting/
     templates:
-      - sourcery/template/SparkAutoViewModelStub.stencil
+      - .sourcery/template/SparkAutoViewModelStub.stencil
     output: Sources/SparkInternalTesting/Generated/AutoViewModelStub.generated.swift
     args:
       autoMockableImports: [Combine]

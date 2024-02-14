@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SnapshotTesting
+@_implementationOnly import SnapshotTesting
 @_spi(SI_SPI) import SparkInternalSnapshotTesting
 import SwiftUI
 

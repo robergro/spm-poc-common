@@ -11,9 +11,9 @@ import XCTest
 @_spi(SI_SPI) @testable import SparkInternalTesting
 
 final class DisplayedTextViewModelTests: XCTestCase {
-    
+
     // MARK: - Tests Init
-    
+
     func test_properties_after_init() {
         // GIVEN
         let textMock = "Hello"
@@ -29,7 +29,7 @@ final class DisplayedTextViewModelTests: XCTestCase {
             attributedText: attributedTextMock,
             getDisplayedTextTypeUseCase: getDisplayedTextTypeUseCaseMock
         )
-        
+
         // THEN
         XCTAssertEqual(viewModel.displayedTextType,
                        displayedTextTypeMock,
@@ -43,7 +43,6 @@ final class DisplayedTextViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.containsText,
                        displayedTextTypeMock.containsText,
                        "Wrong containsText value")
-        
 
         // **
         // GetDisplayedTextTypeUseCase

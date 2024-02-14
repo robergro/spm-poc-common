@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SnapshotTesting
+@_implementationOnly import SnapshotTesting
 
 @_spi(SI_SPI) public func sparkAssertSnapshot<Value, Format>(
     matching value: @autoclosure () throws -> Value,

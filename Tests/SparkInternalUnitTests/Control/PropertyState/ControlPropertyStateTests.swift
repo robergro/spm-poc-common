@@ -11,9 +11,9 @@ import SwiftUI
 @_spi(SI_SPI) @testable import SparkInternal
 
 final class ControlPropertyStateTests: XCTestCase {
-    
+
     // MARK: - Tests
-    
+
     func test_default_value() {
         // GIVEN / WHEN
         let state = ControlPropertyState<String>(for: .normal)

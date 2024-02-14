@@ -10,9 +10,9 @@ import XCTest
 @_spi(SI_SPI) @testable import SparkInternal
 
 final class DisplayedTextTests: XCTestCase {
-    
+
     // MARK: - Optional Init
-    
+
     func test_optional_init_with_only_text() {
         // GIVEN
         let textMock = "My text"

@@ -8,7 +8,7 @@
 
 import SwiftUI
 import UIKit
-import SnapshotTesting
+@_implementationOnly import SnapshotTesting
 
 @_spi(SI_SPI) open class UIKitComponentSnapshotTestCase: SnapshotTestCase {
 

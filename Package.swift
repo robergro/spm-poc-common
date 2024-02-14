@@ -42,6 +42,10 @@ let package = Package(
         .package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing",
             from: "1.11.0"
+        ),
+        .package(
+            url: "https://github.com/realm/SwiftLint",
+            from: "0.54.0"
         )
     ],
     targets: [
@@ -51,6 +55,12 @@ let package = Package(
                 .product(
                     name: "SparkTheming",
                     package: "spm-poc-theming"
+                )
+            ],
+            plugins: [
+                .plugin(
+                    name: "SwiftLintPlugin",
+                    package: "SwiftLint"
                 )
             ]
         ),
@@ -65,6 +75,12 @@ let package = Package(
                 .product(
                     name: "SparkTheme",
                     package: "spm-poc-theming"
+                )
+            ],
+            plugins: [
+                .plugin(
+                    name: "SwiftLintPlugin",
+                    package: "SwiftLint"
                 )
             ]
         ),
@@ -84,6 +100,12 @@ let package = Package(
                     name: "SnapshotTesting",
                     package: "swift-snapshot-testing"
                 ),
+            ],
+            plugins: [
+                .plugin(
+                    name: "SwiftLintPlugin",
+                    package: "SwiftLint"
+                )
             ]
         ),
         .testTarget(
@@ -91,6 +113,12 @@ let package = Package(
             dependencies: [
                 "SparkInternal",
                 "SparkInternalTesting"
+            ],
+            plugins: [
+                .plugin(
+                    name: "SwiftLintPlugin",
+                    package: "SwiftLint"
+                )
             ]
         ),
         .testTarget(
@@ -99,6 +127,12 @@ let package = Package(
                 "SparkInternal",
                 "SparkInternalSnapshotTesting",
                 "SparkInternalTesting"
+            ],
+            plugins: [
+                .plugin(
+                    name: "SwiftLintPlugin",
+                    package: "SwiftLint"
+                )
             ]
         ),
     ]

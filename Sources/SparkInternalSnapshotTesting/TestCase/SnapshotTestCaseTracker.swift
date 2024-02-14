@@ -96,11 +96,11 @@ private extension XCTestCase {
     // MARK: - Methods
 
     var testClassName: String {
-        String(self.sanitizedName.split(separator: " ").first!)
+        String(self.sanitizedName.split(separator: " ").first ?? "")
     }
 
     var testMethodName: String {
-        String(self.sanitizedName.split(separator: " ").last!)
+        String(self.sanitizedName.split(separator: " ").first ?? "")
     }
 
     // MARK: - Private
