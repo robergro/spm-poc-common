@@ -28,25 +28,27 @@ let package = Package(
     ],
     dependencies: [
         // Git
-//        .package(
-//            url: "https://github.com/robergro/spm-poc-theming.git",
-//            from: "1.0.0"
-//        ),
+        .package(
+            url: "https://github.com/robergro/spm-poc-theming.git",
+            from: "1.0.0"
+        ),
 
         // Local
-        .package(
-            path: "../spm-poc-theming"
-        ),
+//        .package(
+//            path: "../spm-poc-theming"
+//        ),
 
         // External
         .package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing",
             from: "1.11.0"
-        ),
+        )/*,
+
         .package(
             url: "https://github.com/realm/SwiftLint",
             from: "0.54.0"
         )
+          */
     ],
     targets: [
         .target(
@@ -56,13 +58,14 @@ let package = Package(
                     name: "SparkTheming",
                     package: "spm-poc-theming"
                 )
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
             ]
+              */
         ),
         .target(
             name: "SparkInternalTesting",
@@ -76,13 +79,14 @@ let package = Package(
                     name: "SparkTheme",
                     package: "spm-poc-theming"
                 )
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
             ]
+              */
         ),
         .target(
             name: "SparkInternalSnapshotTesting",
@@ -100,26 +104,28 @@ let package = Package(
                     name: "SnapshotTesting",
                     package: "swift-snapshot-testing"
                 ),
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
             ]
+              */
         ),
         .testTarget(
             name: "SparkInternalUnitTests",
             dependencies: [
                 "SparkInternal",
                 "SparkInternalTesting"
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
             ]
+              */
         ),
         .testTarget(
             name: "SparkInternalSnapshotTests",
@@ -127,13 +133,14 @@ let package = Package(
                 "SparkInternal",
                 "SparkInternalSnapshotTesting",
                 "SparkInternalTesting"
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
             ]
-        ),
+              */
+        )
     ]
 )
