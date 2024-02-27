@@ -1,4 +1,4 @@
-name: build-framework
+name: build-and-test
 on:
   pull_request:
     types: [ opened, edited, synchronize ]
