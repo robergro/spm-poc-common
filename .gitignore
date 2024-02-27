@@ -6,3 +6,4 @@ DerivedData/
 .netrc
 .swiftpm/
 Sources/Testing/Generated/
+Package.resolved
