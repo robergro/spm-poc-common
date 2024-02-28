@@ -30,7 +30,7 @@ let package = Package(
         // Git
         .package(
             url: "https://github.com/robergro/spm-poc-theming.git",
-            from: "1.0.0"
+            branch: "main"
         ),
 
         // Local
