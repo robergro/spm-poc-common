@@ -3,6 +3,7 @@ on:
   workflow_call
     
 env:
+  spm_path: ${{ vars.SPM_PATH && '/' || '' }}
   spm_name: ${{ vars.SPM_NAME }}-Package
   swift_version: '5.9'
   xcode_path: "/Applications/Xcode_15.0.1.app"
@@ -15,7 +16,7 @@ jobs:
     runs-on: macos-14
     steps:
     - name: "Package name"
-      run: echo "Build ${{ env.spm_name }} SPM"
+      run: echo "Build ${{ env.spm_path }}${{ env.spm_name }} SPM"
     - name: Set Swift Version
       uses: swift-actions/setup-swift@v1
       with:
@@ -27,7 +28,9 @@ jobs:
     - name: Checkout Action
       uses: actions/checkout@v4
     - name: Build
-      run: xcodebuild -scheme ${{ env.spm_name }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} build
+      run: |
+        cd ${{ env.spm_path }}
+        xcodebuild -scheme ${{ env.spm_name }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} build
 
   test:
     name: Unit and Snapshot Test
@@ -46,4 +49,6 @@ jobs:
     - name: Checkout Action
       uses: actions/checkout@v4
     - name: Test
-      run: xcodebuild -scheme ${{ env.spm_name }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} test
+      run:  |
+        cd ${{ env.spm_path }}
+        xcodebuild -scheme ${{ env.spm_name }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} test
