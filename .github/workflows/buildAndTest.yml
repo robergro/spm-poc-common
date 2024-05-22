@@ -55,6 +55,8 @@ jobs:
     - name: Run sourcery
       run: |
         cd ${{ env.spm_path }}
+        ls -a
+        pwd
         xcodebuild -scheme ${{ env.spm_name }} -derivedDataPath ${{ env.spm_name }}${{ env.xcodebuild_derivedData }}
         for file in $( find . -type f -name ".sourcery.yml" -exec dirname {} \; )
         do
