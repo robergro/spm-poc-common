@@ -30,7 +30,6 @@ jobs:
       uses: actions/checkout@v4
     - name: Build
       run: |
-        cd ${{ env.spm_path }}
         xcodebuild -scheme ${{ env.spm_name }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} build
 
   test:
@@ -49,23 +48,19 @@ jobs:
       run: sudo xcode-select -s ${{ env.xcode_path }}
     - name: Checkout Action
       uses: actions/checkout@v4
-    # - name: Get sourcery
-    #   run: |
-    #     brew install sourcery
-    # - name: Run sourcery
-    #   run: |
-    #     cd ${{ env.spm_path }}
-    #     ls -a
-    #     pwd
-    #     xcodebuild -scheme ${{ env.spm_name }} -derivedDataPath ${{ env.spm_name }}${{ env.xcodebuild_derivedData }}
-    #     for file in $( find . -type f -name ".sourcery.yml" -exec dirname {} \; )
-    #     do
-    #       cd ${{ env.spm_path }}
-    #       dirname "$file"
-    #       cd "$file"
-    #       sourcery
-    #     done
+    - name: Get sourcery
+      run: |
+        brew install sourcery
+    - name: Run sourcery
+      run: |
+        xcodebuild -scheme ${{ env.spm_name }} -derivedDataPath ${{ env.spm_name }}${{ env.xcodebuild_derivedData }}
+        for file in $( find . -type f -name ".sourcery.yml" -exec dirname {} \; )
+        do
+          cd ${{ env.spm_path }}
+          dirname "$file"
+          cd "$file"
+          sourcery
+        done
     - name: Test
       run:  |
-        cd ${{ env.spm_path }}
         xcodebuild -scheme ${{ env.spm_name }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} test
