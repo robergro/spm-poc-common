@@ -53,8 +53,6 @@ jobs:
         brew install sourcery
     - name: Run sourcery
       run: |
-        xcodebuild -list
-        
         xcodebuild -scheme ${{ vars.SPM_NAME }} -derivedDataPath ${{ env.xcodebuild_derivedData }} ${{ env.xcodebuild_destination }}
         for file in $( find . -type f -name ".sourcery.yml" -exec dirname {} \; )
         do
