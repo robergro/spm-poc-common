@@ -30,6 +30,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Build
       run: |
+        xcodebuild -list
         xcodebuild -scheme ${{ vars.SPM_NAME }} ${{ env.xcodebuild_sdk }} ${{ env.xcodebuild_destination }} build
 
   test:
@@ -53,6 +54,7 @@ jobs:
         brew install sourcery
     - name: Run sourcery
       run: |
+        xcodebuild -list
         xcodebuild -scheme ${{ vars.SPM_NAME }} -derivedDataPath ${{ env.xcodebuild_derivedData }} ${{ env.xcodebuild_destination }}
         for file in $( find . -type f -name ".sourcery.yml" -exec dirname {} \; )
         do
