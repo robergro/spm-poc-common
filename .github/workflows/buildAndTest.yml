@@ -34,23 +34,10 @@ jobs:
     - name: Run sourcery
       run: |
         xcodebuild -scheme ${{ vars.SPM_NAME }} -derivedDataPath ${{ env.xcodebuild_derivedData }} ${{ env.xcodebuild_destination }}
-        echo "LOGROB Start Loop"
         for file in $( find . -type f -name ".sourcery.yml" -exec dirname {} \; )
         do
-          echo "LOGROB Iteration"
-          pwd
-          echo "LOGROB --0"
-          ls -a
-          echo "LOGROB --1"
           cd ${{ github.workspace }}
-          echo "LOGROB folder"
-          echo $file
-          echo "LOGROB folder dirname"
-          dirname "$file"
-          echo "LOGROB --2"
           cd "$file"
-          echo "LOGROB file"
-          ls -a
+          echo "Dependencies: $file"
           sourcery
         done
-        echo "LOGROB End loop"
